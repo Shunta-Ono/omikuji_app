@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h1>おみくじ</h1>
+  <button id="btn">おみくじスタート</button>
+  <div id="disp"></div>
+
+  <script>
+    //扱うものが複数ある場合は配列に入れる
+    let omikuji = ["大吉","中吉","小吉","凶","大凶"]
+    //扱いたい部品を変数化すること
+    let btn = document.getElementById("btn");
+    let disp = document.getElementById("disp")
+    let num = 0;
+    //なにをどうしたらイベント発生させるのかを考える
+    btn.addEventListener('click', function(){
+      let num = Math.floor(Math.random() * omikuji.length);
+      disp.innerHTML = omikuji[num];
+    })
+
+  </script>
+</body>
+</html>
